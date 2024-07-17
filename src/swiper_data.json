@@ -1,0 +1,34 @@
+{
+    "slides": [
+      { "img":"/img/png/main_gms.jpg",
+        "href":"https://www.naver.com/",
+        "text":"우리만의 가치로 세상을 더 가치있게"
+        
+     }
+     ,
+     { "img":"/img/png/main_img_yys.jpg",
+        "href":"https://www.naver.com/",
+        "text":"우리만의 가치로 세상을 더 가치있게"
+        
+     }
+     ,
+     { "img":"/img/png/main_jjh.jpg",
+        "href":"https://www.naver.com/",
+        "text":"우리만의 가치로 세상을 더 가치있게"
+        
+     }
+     ,
+     { "img":"/img/png/main_pyj.jpg",
+        "href":"https://www.naver.com/",
+        "text":"우리만의 가치로 세상을 더 가치있게"
+        
+     }
+     ,
+     { "img":"/img/png/main_yjy.jpg",
+        "href":"https://www.naver.com/",
+        "text":"우리만의 가치로 세상을 더 가치있게"
+       
+     }
+     
+    ]
+  }

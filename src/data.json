@@ -2,8 +2,8 @@
 {
   "logo": {
     "Text": "uglyus",
-    "href": "/uglyus/",
-    "img": "/uglyus/img/img_yys/svg/ugly_us_logo.svg",
+    "href": "https://yunjuyean.github.io/uglyus/",
+    "img": "/img/svg/ugly_us_logo.svg",
     "cls": ["me-3"]
   },
   "gnb": [
@@ -14,7 +14,8 @@
       "gnb_ul_li": [
         {
           "Text": "미션",
-          "href": "mission.html"
+          "href": "mission.html",
+          "cls": ""
         },
         {
           "Text": "소싱철학",
