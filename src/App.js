@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
            <Header_yys/>
-           <Swiper_yys/>
+           <Swiper_yys keynm='yswiper' />
     </div>
   );
 }

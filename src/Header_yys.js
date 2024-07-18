@@ -8,7 +8,7 @@ function Header_yys() {
     return(
         <>
             <header id="hd_yys" className="fixed-top flexbetween_yys">
-                <div className="fixed-top flexbetween_yys">
+                <div className="fixed-top flexbetween_yys bg-white">
                     <h1 className="mx-30">
                         <Link to={yysnavi.logo.href}>
                             <img src={yysnavi.logo.img} alt="Logo" />

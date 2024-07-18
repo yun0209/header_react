@@ -1,42 +1,55 @@
 import React, { useRef, useState } from 'react';
-import './css/header.css';
-import { Link, Route, Routes } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import yys_swiper from './swiper_data.json';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+import './css/header.css';
+import { Pagination, Autoplay } from 'swiper/modules';
+import swiperdb from './swiper_data.json';
+import { Link } from 'react-router-dom';
 
-function Swiper_yys() {
-    const {slides} = yys_swiper
-    return (
-        <>
-           
-            <section id="yswiper">
-                <div class="main_caver">
-                    <div class="swiper ov mySwiper">
-                        <div class="swiper-wrapper">
-                            {
-                                slides.map((v,i)=>{
-                                   <div class="swiper-slide">
-                                       {/* <div class={v.cls}><a href={v.href}></a>{v.text}</div> */}
-                                   </div>
+const Swiper_yys = (props) => {
+  const { slides } = swiperdb;
 
-                                })
-                            }
-                            
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-
-                </div>
-    
-
-           </section>
+  return (
+    <>
+       <div id={props.keynm} className="swiper-container">
+        <div class="main_caver">
+            <div class="swiper ov mySwiper">
                 
-         
-           
-        </>
-    )
-}
+                    <Swiper
+                        modules={[Pagination, Autoplay]}
+                        spaceBetween={73}
+                        slidesPerView={1.35}
+                        centeredSlides={true}
+                        loop={true}
+                        autoplay={{
+                        delay: 6500,
+                        disableOnInteraction: false,
+                        }}
+                        pagination={{
+                        clickable: true,
+                    }}
+                    >
+                    {slides.map((v, i) => (
+                        <SwiperSlide key={i}>
+                            <div className="bs">
+                                <Link to={v.href}>
+                                    <img src={v.img} alt=""  className='bs'/>
+                                    {v.text}
+                                </Link>
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                    </Swiper>
+                    
+                
+            </div>
+        </div>
+    </div>
+    </>
+    
+  );
+};
 
-export default Swiper_yys
+export default Swiper_yys;
