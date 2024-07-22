@@ -36,6 +36,10 @@ li {
   padding: 0 48px;
   z-index: 1000000;
 }
+#hd_yys h1 img {
+  width: 150px;
+  height: 50px;
+}
 #hd_yys .gnb:before {
   content: "";
   position: absolute;
@@ -328,10 +332,6 @@ li {
   background-position: center;
   background-repeat: no-repeat;
   margin-top: 92px;
-}
-#yswiper .main_caver .swiper-wrapper .bs a {
-  width: 100%;
-  height: 100%;
 }
 #yswiper .main_caver .swiper-wrapper .swiper-slide-active .bs {
   height: 600px !important;

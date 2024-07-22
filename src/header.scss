@@ -43,6 +43,13 @@
      position: fixed;
      padding: 0 48px;
      z-index: 1000000;
+     h1{
+        img{
+            width: 150px;
+            height: 50px;
+        }
+        
+     }
      .gnb
      {
                  &:before {
@@ -427,10 +434,7 @@
                 background-repeat: no-repeat;
                 margin-top: 92px; 
 
-                a{
-                    width: 100%;
-                    height: 100%;
-                }
+               
             }
             .swiper-slide-active .bs
             {

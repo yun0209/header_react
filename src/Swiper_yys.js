@@ -33,9 +33,9 @@ const Swiper_yys = (props) => {
                     >
                     {slides.map((v, i) => (
                         <SwiperSlide key={i}>
-                            <div className={v.cls}>
-                                <Link to={v.href}>
-                                </Link>
+                            <div className={v.cls} style={{ "background":`url(${v.img}) center`}}>
+                                <Link to={v.href} className='w-100 h-100'>
+                                </Link> 
                             </div>
                         </SwiperSlide>
                     ))}
