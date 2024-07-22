@@ -13,7 +13,7 @@ const Swiper_yys = (props) => {
 
   return (
     <>
-       <div id={props.keynm} className="swiper-container">
+       <div id="yswiper" className="swiper-container">
         <div class="main_caver">
             <div class="swiper ov mySwiper">
                 
@@ -24,7 +24,7 @@ const Swiper_yys = (props) => {
                         centeredSlides={true}
                         loop={true}
                         autoplay={{
-                        delay: 6500,
+                        delay: 6500000,
                         disableOnInteraction: false,
                         }}
                         pagination={{
@@ -33,10 +33,8 @@ const Swiper_yys = (props) => {
                     >
                     {slides.map((v, i) => (
                         <SwiperSlide key={i}>
-                            <div className="bs">
+                            <div className={v.cls}>
                                 <Link to={v.href}>
-                                    <img src={v.img} alt=""  className='bs'/>
-                                    {v.text}
                                 </Link>
                             </div>
                         </SwiperSlide>
