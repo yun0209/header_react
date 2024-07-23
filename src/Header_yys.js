@@ -7,14 +7,14 @@ function Header_yys() {
     const { gnb } = yysnavi;
     return(
         <>
-            <header id="hd_yys" className="fixed-top flexbetween_yys">
-                <div className="fixed-top flexbetween_yys bg-white">
-                    <h1 className="mx-30">
-                        <Link to={yysnavi.logo.href}>
+            <header id="hd_yys" className="fixed-top d-flex justify-content-between align-items-center ">
+                <div className="fixed-top fixed-top d-flex justify-content-between align-items-center bg-white h-100px">
+                    <h1 className="mx-60 ">
+                        <Link to={yysnavi.logo.href} className='w-100 h-100'>
                             <img src={yysnavi.logo.img} alt="Logo" />
                         </Link>
                     </h1>
-                    <ul className="font_navi flexcenter gnb mb-0 ps-0">
+                    <ul className="font_navi fixed-top d-flex justify-content-center align-items-center gnb mb-0 ps-0">
                     {gnb.map((v, i) => (
                         <li className="nav-mission px-60 gnb_li rel">
                             <Link className="d-block gnb_a" to={v.href}>
@@ -32,7 +32,7 @@ function Header_yys() {
                         </li>
                     ))}
                     </ul>
-                    <div className="login mx-30">
+                    <div className="login mx-60">
                         <ul className="d-flex px-0 my-0">
                             <li className="me-3 font_login">
                                 <Link className="nav-link font_login_pyj" to="#about">

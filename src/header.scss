@@ -23,17 +23,30 @@
  }
  a {
      text-decoration: none !important;
+     cursor: pointer;
  }
  
  li{
     list-style: none !important;
 }
  
-    
-.mx-30{
+.h-100px{
+    height: 100px;
+}
+.mx-60{
     margin: 0 60px;
 }
-     
+
+.flexbetween_yys{
+    display: flex !important;
+    justify-content:space-between !important;
+    align-items: center !important;
+   }
+ .flexcenter{
+    display: flex !important;
+    justify-content:center !important;
+    align-items: center !important;
+ }
          
      
  
@@ -240,16 +253,7 @@
      }
      // hover 추가 완료
  }
- .flexbetween_yys{
-    display: flex !important;
-    justify-content:space-between !important;
-    align-items: center !important;
-   }
- .flexcenter{
-    display: flex !important;
-    justify-content:center !important;
-    align-items: center !important;
- }
+
  #mainbanner_yys{
      overflow: hidden;
      // padding: 100px 0 200px 0;
@@ -315,8 +319,6 @@
  
    #collab_banner_yys{
     
- 
- 
      background-image: url(/public/img/png/collab_banner.jpg);
      max-width: 1400px;
      margin: 0 auto;    
@@ -329,28 +331,6 @@
      background-size: auto 100%;
      font-family: 'Pretendard';
      background-color: #BFEFFA !important;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
      margin-top: 20px;
      margin-bottom: 150px;
  
@@ -383,25 +363,9 @@
      }
  
    }
-   .bg0{
-    background: url(/public/img/png/main_gms.jpg);
-   }
-   .bg1{
-    background: url(/public/img/png/main_img_yys.jpg);
-   }
-   .bg2{
-    background: url(/public/img/png/main_jjh.jpg);
-   }
-   .bg3{
-    background: url(/public/img/png/main_pyj.jpg);
-   }
-   .bg4{
-    background: url(/public/img/png/main_yjy.jpg);
-   }
+  
 
    #yswiper{
-        
-
         overflow: hidden !important;
         margin-top: 4.8rem;
         height: 720px;
@@ -457,9 +421,6 @@
       .ov{
         width: 100%;
         margin: 30px 0;
-        padding: 30px 0;
-        
-        
       }
   
       .swiper{
