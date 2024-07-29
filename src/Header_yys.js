@@ -16,7 +16,7 @@ function Header_yys() {
                     </h1>
                     <ul className="font_navi fixed-top d-flex justify-content-center align-items-center gnb mb-0 ps-0">
                     {gnb.map((v, i) => (
-                        <li className="nav-mission px-60 gnb_li rel">
+                        <li className="nav-mission px-60 gnb_li ">
                             <Link className="d-block gnb_a" to={v.href}>
                                 <span>{v.Text}</span>
                             </Link>

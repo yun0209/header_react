@@ -14,8 +14,8 @@ const Swiper_yys = (props) => {
   return (
     <>
        <div id="yswiper" className="swiper-container">
-        <div class="main_caver">
-            <div class="swiper ov mySwiper">
+        <div className="main_caver">
+            <div className="swiper ov mySwiper">
                 
                     <Swiper
                         modules={[Pagination, Autoplay]}
@@ -27,13 +27,40 @@ const Swiper_yys = (props) => {
                         delay: 6500000,
                         disableOnInteraction: false,
                         }}
+                        breakpoints={{
+                            400: {
+                                slidesPerView: 1,
+                                spaceBetween: 20,
+                            },
+                            600: {
+                                slidesPerView: 1,
+                                spaceBetween: 20,
+                            },
+                            800: {
+                                slidesPerView: 1,
+                                spaceBetween: 20,
+                            },
+                            900: {
+                                slidesPerView: 1,
+                                spaceBetween: 25,
+                            },
+                            1500: {
+                                slidesPerView: 1.3,
+                                spaceBetween: 35,
+                            },
+                            1800: {
+                                slidesPerView: 1.35,
+                                spaceBetween: 73,
+                            }
+                        }}
                         pagination={{
                         clickable: true,
+                        
                     }}
                     >
                     {slides.map((v, i) => (
                         <SwiperSlide key={i}>
-                            <div className={v.cls} style={{ "background":`url(${v.img}) center`}}>
+                            <div className={v.cls} style={{ "background":`url(${v.img}) center/ cover`}}>
                                 <Link to={v.href} className='w-100 h-100'>
                                 </Link> 
                             </div>
