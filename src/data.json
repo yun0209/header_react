@@ -10,7 +10,7 @@
     {
       "Text": "우리의미션",
       "href": "misson.html",
-      "cls": ["nav-mission me-5 gnb_li rel", "d-block gnb_a", "gnb_ul abs", "gnb_ul_li"],
+      "cls": ["nav-mission px-60 gnb_li"],
       "gnb_ul_li": [
         {
           "Text": "미션",
@@ -26,7 +26,7 @@
     {
       "Text": "정기배송",
       "href": "misson.html",
-      "cls": ["nav-mission2 me-5 gnb_li rel", "d-block gnb_a2", "gnb_ul abs", "gnb_ul_li"],
+      "cls": ["nav-mission px-60 gnb_li"],
       "gnb_ul_li": [
         {
           "Text": "후기",
@@ -45,7 +45,7 @@
     {
       "Text": "싱싱마켓",
       "href": "misson.html",
-      "cls": ["nav-mission3 me-5 gnb_li rel", "d-block gnb_a3", "gnb_ul abs", "gnb_ul_li"],
+      "cls": ["nav-mission px-60 gnb_li"],
       "gnb_ul_li": [
         {
           "Text": "인기상품",
@@ -60,7 +60,7 @@
     {
       "Text": "커뮤니티",
       "href": "misson.html",
-      "cls": ["nav-mission4 me-5 gnb_li rel", "d-block gnb_a4", "gnb_ul abs", "gnb_ul_li"],
+      "cls": ["nav-mission px-60 gnb_li"],
       "gnb_ul_li": [
         {
           "Text": "오늘의레시피",
@@ -75,7 +75,27 @@
           "href": "social.html"
         }
       ]
+    },
+    {
+      "Text": "마이페이지",
+      "href": "misson.html",
+      "cls": ["nav-mission px-60 gnb_li d-lg-none"],
+      "gnb_ul_li": [
+        {
+          "Text": " ",
+          "href": " "
+        },
+        {
+          "Text": " ",
+          "href": " "
+        },
+        {
+          "Text": " ",
+          "href": " "
+        }
+      ]
     }
+
   ],
   "util": [
     {

@@ -13,7 +13,7 @@ const Swiper_yys = (props) => {
 
   return (
     <>
-       <div id="yswiper" className="swiper-container">
+       <div id="yswiper" className="swiper-container d-none">
         <div className="main_caver">
             <div className="swiper ov mySwiper">
                 
@@ -30,19 +30,19 @@ const Swiper_yys = (props) => {
                         breakpoints={{
                             400: {
                                 slidesPerView: 1,
-                                spaceBetween: 20,
+                                spaceBetween: 0,
                             },
                             600: {
                                 slidesPerView: 1,
-                                spaceBetween: 20,
+                                spaceBetween: 0,
                             },
                             800: {
                                 slidesPerView: 1,
-                                spaceBetween: 20,
+                                spaceBetween: 0,
                             },
                             900: {
                                 slidesPerView: 1,
-                                spaceBetween: 25,
+                                spaceBetween: 0,
                             },
                             1500: {
                                 slidesPerView: 1.3,
@@ -60,8 +60,10 @@ const Swiper_yys = (props) => {
                     >
                     {slides.map((v, i) => (
                         <SwiperSlide key={i}>
-                            <div className={v.cls} style={{ "background":`url(${v.img}) center/ cover`}}>
+                            <div className={v.cls} style={{ "background":`url(${v.b_img}) center/ cover`}}>
                                 <Link to={v.href} className='w-100 h-100'>
+                                   
+                                    
                                 </Link> 
                             </div>
                         </SwiperSlide>

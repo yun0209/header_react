@@ -1,36 +1,59 @@
 
-@media(max-width:1200px){
-    #hd_yys{
-        .gnb{
-            &:hover{
-                .gnb_li{
-                    padding: 0 3% !important;
-                }
+// @media(max-width:1200px){
+//     #hd_yys{
+//         .gnb{
+//             &:hover{
+//                 .gnb_li{
+//                     padding: 0 3% !important;
+//                 }
                 
-            }
-        }
-        .gnb_li{
-            padding: 0 3% !important;
-        }
+//             }
+//         }
+//         .gnb_li{
+//             padding: 0 3% !important;
+//         }
 
-    }
-}
-@media(max-width:800px){
-    #hd_yys{
-        .gnb{
-            display: none !important;
-        }
+//     }
+//     #yswiper{
         
-    }
-}
-@media(max-width:600px){
-    #hd_yys{
-        .login{
-            text-wrap: nowrap !important;
+//         .bs{
+//             width: 100% !important;
+//         }
+//     }
+// }
+// @media(max-width:800px){
+  
+//     #yswiper{
+//         .slide{
+//             img{
+//                 background: url( 'img/png/main_yjy_M.jpg' ) no-repeat !important;
+//                 background-size: cover !important;
+//             }
+//         }
+//         .bs{
+//             width: 100% !important;
+//         }
+//     }
+// }
+// @media(max-width:600px){
+//     #hd_yys{
+//         .login{
+//             text-wrap: nowrap !important;
 
-        }
-    }
-}
+//         }
+//     }
+//     #yswiper{
+//         .slide{
+//             img{
+//                 background: url( 'img/png/main_pyj_M.jpg' ) no-repeat !important;
+//                 background-size: cover !important;
+//             }
+//         }
+//         .bs{
+//             width: 100% !important;
+//         }
+//     }
+// }
  .jcc{
      justify-content: center !important;
  }
@@ -41,9 +64,7 @@
      align-items: center !important;
  }
 
- .abs{
-     position: absolute !important;
- }
+
  a {
      text-decoration: none !important;
      cursor: pointer;
@@ -52,14 +73,51 @@
  li{
     list-style: none !important;
 }
- 
+.icon-cotm{
+    
+    font-weight: 200;
+    font-size: 3rem;
+    @media (max-width:990px){
+        font-size: 1.5rem;
+    }
+
+}
+.btn-cotm{
+    outline:none !important;
+    background-color: unset !important;
+    border: none !important;
+    outline: none;
+    cursor: pointer;
+}
 .h-100px{
-    height: 100px;
+    
+    @media (max-width:990px){
+        height: 80px;
+    }
+    @media (max-width:575px){
+        height: 50px;
+    }
+    @media (min-width:991px){
+        height: 100px;
+    }
+
 }
 .mx-60{
-    margin: 0 60px;
+    
+    @media (max-width:990px) {
+        margin: 0 30px;
+    }
+    @media (max-width:575px) {
+        margin:0 1rem;
+    }
+    @media (min-width:991px) {
+        margin: 0 60px;
+    }
+    
 }
-
+body{
+    background-color: rgb(255, 255, 255);
+}
 .flexbetween_yys{
     display: flex !important;
     justify-content:space-between !important;
@@ -79,15 +137,88 @@
      position: fixed;
      padding: 0 48px;
      z-index: 1000000;
+     &:hover {
+        &:before {
+            content: "";
+           height: 300px !important;
+           border-bottom: 1px solid #cc5638 !important;
+           transition: height 0.5s;
+        }
+     }
+     @media (max-width:991px){
+        &:hover {
+            &:before {
+                content: "";
+                background-color: #797979;
+                opacity: 50%;
+                height:100% !important;
+                border-bottom:unset;
+                transition: unset;
+            }
+         }
+     }
+
      h1{
+        height: 100%;
+        a{
+            align-items: center;
+            display: flex;
+        }
         img{
             width: 150px;
             height: 50px;
+            @media (max-width:990px){
+                height: 20px;
+            }
+        }   
+       }
+     button{
+        @media (max-width:991px){
+            position: absolute;
+            right: 0;
+            z-index: 10000;
+
         }
-        
+     }
+     .login{
+        @media (max-width:991px){
+            right: 12%;
+            position: absolute;
+            z-index: 10000;
+            
+
+        }
+
      }
      .gnb
      {
+        @media (max-width:991px) {
+            padding: 10px;
+            height:600px;
+            right: 0;
+            left:50%;
+            top: 0px;
+            border-radius: 20px 0 0 20px;
+            background-color: rgb(190, 190, 190);
+            
+            &:hover{
+                .gnb_li{
+                    padding: unset;
+                }
+            }
+           
+            
+       }
+        &:hover{
+            .gnb_li{
+                .gnb_ul{
+                height: 180px;
+                transition: 0.5s;
+
+                }
+            }
+        }
+    }
                  &:before {
                      content: "";
                      position: absolute;
@@ -99,40 +230,68 @@
                      background-color: #ff6943 !important;
                      border-bottom: none !important;
                      margin-bottom: 0 !important;
-                 }
+                    }
              
-                 &:hover {
-                     &:before {
-                         content: "";
-                        height: 200px !important;
-                        border-bottom: 1px solid #cc5638 !important;
-                        transition: height 0.5s;
-                     }
+                 
                      
-                     .gnb_li{
-                         padding:0 90px ;
-                         .gnb_ul{
-                             height: 200px;
-                             
-                         }
-                     }
+                    
+                        .gnb_ul{
+                            height: 200px;
+                            
+                        }
+                    
                      
                      
-                 }
+                 
                  
                  .gnb_li{
                      position: relative;
                      transition: 0.5s;
                      padding:0 80px;
-                     
+                     @media (max-width:991px){
+                        // position: unset;
+                        padding: unset;
+                        top: 12%;
+                        &:hover{
+                            .gnb_a{
+                                span{
+                                    &::before{
+                                        width: 9% !important;
+                                        
+                                    }
+                                    
 
-                     
-                     
+                                }
+                            }
+                            &::after{
+                                content: "+";
+                                position: absolute;
+                                color: #FE663F;
+                                right: 20px;
+                                transform: translateY(-50%);
+                                top: 50%;
+                                transition: 0.5s;
+                            }
+                        }
+                        &::after{
+                            content: "+";
+                            position: absolute;
+                            color: #000000;
+                            right: 20px;
+                            transform: translateY(-50%);
+                            top: 50%;
+                            transition: 0.5s;
+                        }
+                     }
+
                      &:hover{
                         
                          .gnb_a{
                              span{
-                                     
+                                    @media (max-width:991px) {
+                                        font-size: 14px;
+                                        font-weight: 500;
+                                    }  
                                      line-height: 100px;
                                      font-family: "Pretendard";
                                      font-size: 22px;
@@ -140,13 +299,9 @@
                                      color: #ff6943; 
                                      
                                      &:before {
-                                        
-                                          
-                                                     width: 40%;
-                                                
+                                      width: 40%;
+                                    }
                                    
-                                         
-                                     }
                              }
                             
                              
@@ -155,7 +310,7 @@
                         
                          
                          
-                     }
+                      }
                      
                      .gnb_a{
                                      line-height: 100px;
@@ -163,6 +318,13 @@
                                      font-size: 22px;
                                      font-weight: 400;
                                      color: #414b5a;
+                                     @media (max-width:991px){
+                                        line-height: 56px;
+                                        font-size: 14px;
+                                        font-weight: 500;
+                                        
+
+                                     }
                                      span{
                                         &:before {
                                         
@@ -180,12 +342,19 @@
                                                  background: #ff6943;
                                                  border-radius: 3px;
                                                  transition: all 0.4s;
+                                                 @media (max-width:991px){
+                                                    left: 30%;
+                                                    top: 56%;
+                                                 }
                                      }
                                      
                                  }
                      }
-                 }
+                 
                  .gnb_ul {
+                    @media (max-width:991px){
+                        position: unset;
+                    }
                              overflow: hidden;
                              height: 0;
                              top: 100%;
@@ -272,6 +441,11 @@
          list-style: none;
          &:hover { 
              color: #FF6943;
+         }
+         @media (max-width:991px) {
+            font-size: 12px;
+            font-weight: 600;
+            padding: 15px 10px;
          }
      }
      // hover 추가 완료
@@ -416,7 +590,7 @@
                 align-items: center;
                 display: flex;
                 height: 400px;
-                width: 1400px !important;
+                width: 1400px ;
                 background-position: center;
                 background-repeat: no-repeat;
                 margin-top: 92px; 

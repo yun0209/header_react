@@ -1,6 +1,8 @@
 import React from 'react'
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import yysnavi from './data.json';
 import './css/header.css';
+
 import { Link, Route, Routes } from 'react-router-dom';
 
 function Header_yys() {
@@ -14,15 +16,17 @@ function Header_yys() {
                             <img src={yysnavi.logo.img} alt="Logo" />
                         </Link>
                     </h1>
-                    <ul className="font_navi fixed-top d-flex justify-content-center align-items-center gnb mb-0 ps-0">
+                    
+                    
+                    <ul className="font_navi fixed-top  d-lg-flex justify-content-center align-items-center gnb mb-0 ps-0">
                     {gnb.map((v, i) => (
-                        <li className="nav-mission px-60 gnb_li ">
+                        <li className={v.cls}>
                             <Link className="d-block gnb_a" to={v.href}>
                                 <span>{v.Text}</span>
                             </Link>
-                            <ul className="gnb_ul abs">
+                            <ul className="gnb_ul d-none">
                                 {v.gnb_ul_li.map((vv, ii) => (
-                                <li className="gnb_ul_li">
+                                <li className="gnb_ul_li ">
                                     <Link to={vv.href}>
                                     <span>{vv.Text}</span>
                                     </Link>
@@ -32,7 +36,7 @@ function Header_yys() {
                         </li>
                     ))}
                     </ul>
-                    <div className="login mx-60">
+                    <div className="login mx-60 ">
                         <ul className="d-flex px-0 my-0">
                             <li className="me-3 font_login">
                                 <Link className="nav-link font_login_pyj" to="#about">
@@ -46,6 +50,10 @@ function Header_yys() {
                             </li>
                         </ul>
                     </div>
+                    <button onClick={()=>{
+                        }} className='d-lg-none btn-cotm mx-60'>
+                            <i className ='bi bi-list icon-cotm'></i>
+                     </button>
                 </div>
             </header>
     
