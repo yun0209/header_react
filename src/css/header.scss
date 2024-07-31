@@ -197,7 +197,7 @@ body{
      .gnb
      {
         @media (max-width:991px) {
-            padding: 10px;
+            padding: 9px 0px 9px 19px;
             height:600px;
             right: 0;
             left:50%;
@@ -241,6 +241,9 @@ body{
                     
                         .gnb_ul{
                             height: 200px;
+                            @media (max-width:900px){
+                                display: none;
+                            }
                             
                         }
                     
@@ -252,6 +255,9 @@ body{
                      position: relative;
                      transition: 0.5s;
                      padding:0 80px;
+                     @media (max-width:1200px){
+                        padding: 0 29px;
+                     }
                      @media (max-width:991px){
                         // position: unset;
                         padding: unset;
@@ -260,7 +266,9 @@ body{
                             .gnb_a{
                                 span{
                                     &::before{
-                                        width: 9% !important;
+                                        
+                                        width: 8% !important;
+                                        border-radius: unset;
                                         
                                     }
                                     
@@ -347,7 +355,7 @@ body{
                                                  border-radius: 3px;
                                                  transition: all 0.4s;
                                                  @media (max-width:991px){
-                                                    left: 30%;
+                                                    left: 42%;
                                                     top: 56%;
                                                  }
                                      }

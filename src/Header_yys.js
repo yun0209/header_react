@@ -24,7 +24,7 @@ function Header_yys() {
                             <Link className="d-block gnb_a" to={v.href}>
                                 <span>{v.Text}</span>
                             </Link>
-                            <ul className="gnb_ul d-none">
+                            <ul className="gnb_ul">
                                 {v.gnb_ul_li.map((vv, ii) => (
                                 <li className="gnb_ul_li ">
                                     <Link to={vv.href}>
