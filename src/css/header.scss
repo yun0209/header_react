@@ -165,12 +165,16 @@ body{
             display: flex;
         }
         img{
-            width: 150px;
+            
             height: 50px;
             @media (max-width:990px){
                 height: 20px;
             }
-        }   
+        }
+        @media (max-width:991px){
+            
+        }
+
        }
      button{
         @media (max-width:991px){
