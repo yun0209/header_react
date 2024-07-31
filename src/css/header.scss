@@ -116,7 +116,7 @@
     
 }
 body{
-    background-color: rgb(255, 255, 255);
+    background-color: #da0808;
 }
 .flexbetween_yys{
     display: flex !important;
@@ -133,7 +133,7 @@ body{
  
  #hd_yys{
      
-     background-color: #ffffff !important;
+     background-color: #e2c8c8 !important;
      position: fixed;
      padding: 0 48px;
      z-index: 1000000;
@@ -203,7 +203,7 @@ body{
             left:50%;
             top: 0px;
             border-radius: 20px 0 0 20px;
-            background-color: rgb(190, 190, 190);
+            background-color: rgb(255, 255, 255);
             
             &:hover{
                 .gnb_li{
@@ -214,13 +214,19 @@ body{
             
        }
         &:hover{
-            .gnb_li{
-                .gnb_ul{
-                height: 180px;
-                transition: 0.5s;
-
+            @media (min-width:992px) {
+                .gnb_li{
+               
+                
+                    .gnb_ul{
+                    height: 180px;
+                    transition: 0.5s;
+    
+                    }
                 }
+                
             }
+            
         }
     }
                  &:before {
@@ -241,10 +247,7 @@ body{
                     
                         .gnb_ul{
                             height: 200px;
-                            @media (max-width:900px){
-                                display: none;
-                            }
-                            
+                           
                         }
                     
                      
@@ -262,7 +265,11 @@ body{
                         // position: unset;
                         padding: unset;
                         top: 12%;
-                        &:hover{
+                        .gnb_ul{
+                            max-height: 0;  
+                            height: auto !important;                             
+                        }
+                        &.action{
                             .gnb_a{
                                 span{
                                     &::before{
@@ -277,17 +284,22 @@ body{
                             }
                             &::after{
                                 content: "+";
-                                position: absolute;
+                                // position: absolute;
+                                font-size: 1.5rem;
                                 color: #FE663F;
                                 right: 20px;
                                 transform: translateY(-50%);
                                 top: 50%;
                                 transition: 0.5s;
                             }
+                            .gnb_ul{
+                                max-height: 200px;                               
+                            }
                         }
                         &::after{
                             content: "+";
                             position: absolute;
+                            font-size: 1.5rem;
                             color: #000000;
                             right: 20px;
                             transform: translateY(-50%);

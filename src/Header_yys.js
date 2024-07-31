@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import yysnavi from './data.json';
 import './css/header.css';
@@ -7,10 +7,29 @@ import { Link, Route, Routes } from 'react-router-dom';
 
 function Header_yys() {
     const { gnb } = yysnavi;
+    
+    useEffect(()=>{
+        const gnbli = document.querySelectorAll('.gnb_li');
+        gnbli.forEach((v, i)=>{
+        v.addEventListener('click',()=>{
+            const targetnum = parseInt(v.dataset.num);
+            console.log(targetnum, v.dataset.num, typeof v.dataset.num)
+            for(let x = 0 ; x < gnbli.length; x++){
+                if(x === targetnum){
+                    gnbli[x].classList.toggle('action');
+                }else{
+                    gnbli[x].classList.remove('action');
+                }
+
+            }
+        })
+
+       }) 
+    },[])
     return(
         <>
             <header id="hd_yys" className="fixed-top d-flex justify-content-between align-items-center ">
-                <div className="fixed-top fixed-top d-flex justify-content-between align-items-center bg-white h-100px">
+                <div className="fixed-top fixed-top d-flex justify-content-between align-items-center h-100px">
                     <h1 className="mx-60 ">
                         <Link to={yysnavi.logo.href} className='w-100 h-100'>
                             <img src={yysnavi.logo.img} alt="Logo" />
@@ -20,13 +39,13 @@ function Header_yys() {
                     
                     <ul className="font_navi fixed-top  d-lg-flex justify-content-center align-items-center gnb mb-0 ps-0">
                     {gnb.map((v, i) => (
-                        <li className={v.cls}>
-                            <Link className="d-block gnb_a" to={v.href}>
+                        <li className={v.cls} data-num={i} key={i} >
+                            <a href='#none' className="d-block gnb_a" >
                                 <span>{v.Text}</span>
-                            </Link>
+                            </a>
                             <ul className="gnb_ul">
                                 {v.gnb_ul_li.map((vv, ii) => (
-                                <li className="gnb_ul_li ">
+                                <li className="gnb_ul_li " key={ii}>
                                     <Link to={vv.href}>
                                     <span>{vv.Text}</span>
                                     </Link>

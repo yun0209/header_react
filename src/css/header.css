@@ -70,7 +70,7 @@ li {
 }
 
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: #da0808;
 }
 
 .flexbetween_yys {
@@ -86,7 +86,7 @@ body {
 }
 
 #hd_yys {
-  background-color: #ffffff !important;
+  background-color: #e2c8c8 !important;
   position: fixed;
   padding: 0 48px;
   z-index: 1000000;
@@ -144,15 +144,17 @@ body {
     left: 50%;
     top: 0px;
     border-radius: 20px 0 0 20px;
-    background-color: rgb(190, 190, 190);
+    background-color: rgb(255, 255, 255);
   }
   #hd_yys .gnb:hover .gnb_li {
     padding: unset;
   }
 }
-#hd_yys .gnb:hover .gnb_li .gnb_ul {
-  height: 180px;
-  transition: 0.5s;
+@media (min-width: 992px) {
+  #hd_yys .gnb:hover .gnb_li .gnb_ul {
+    height: 180px;
+    transition: 0.5s;
+  }
 }
 #hd_yys:before {
   content: "";
@@ -169,11 +171,6 @@ body {
 #hd_yys .gnb_ul {
   height: 200px;
 }
-@media (max-width: 900px) {
-  #hd_yys .gnb_ul {
-    display: none;
-  }
-}
 #hd_yys .gnb_li {
   position: relative;
   transition: 0.5s;
@@ -189,22 +186,30 @@ body {
     padding: unset;
     top: 12%;
   }
-  #hd_yys .gnb_li:hover .gnb_a span::before {
+  #hd_yys .gnb_li .gnb_ul {
+    max-height: 0;
+    height: auto !important;
+  }
+  #hd_yys .gnb_li.action .gnb_a span::before {
     width: 8% !important;
     border-radius: unset;
   }
-  #hd_yys .gnb_li:hover::after {
+  #hd_yys .gnb_li.action::after {
     content: "+";
-    position: absolute;
+    font-size: 1.5rem;
     color: #FE663F;
     right: 20px;
     transform: translateY(-50%);
     top: 50%;
     transition: 0.5s;
   }
+  #hd_yys .gnb_li.action .gnb_ul {
+    max-height: 200px;
+  }
   #hd_yys .gnb_li::after {
     content: "+";
     position: absolute;
+    font-size: 1.5rem;
     color: #000000;
     right: 20px;
     transform: translateY(-50%);
