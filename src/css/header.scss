@@ -106,18 +106,18 @@
     
     @media (max-width:990px) {
         margin: 0 30px;
+        
     }
     @media (max-width:575px) {
         margin:0 1rem;
     }
     @media (min-width:991px) {
         margin: 0 60px;
+
     }
     
 }
-body{
-    background-color: #da0808;
-}
+
 .flexbetween_yys{
     display: flex !important;
     justify-content:space-between !important;
@@ -143,6 +143,15 @@ body{
            height: 300px !important;
            border-bottom: 1px solid #cc5638 !important;
            transition: height 0.5s;
+           .gnb_li{
+               
+                
+                .gnb_ul{
+                height: 180px;
+                transition: 0.5s;
+
+                }
+            }
         }
      }
      @media (max-width:991px){
@@ -186,9 +195,9 @@ body{
      }
      .login{
         @media (max-width:991px){
-            right: 12%;
+            left: 50%;
             position: absolute;
-            z-index: 10000;
+            z-index: 20000;
             
 
         }
@@ -197,7 +206,8 @@ body{
      .gnb
      {
         @media (max-width:991px) {
-            padding: 9px 0px 9px 19px;
+            display: none;
+            padding: 9px 0px;
             height:600px;
             right: 0;
             left:50%;
@@ -205,11 +215,11 @@ body{
             border-radius: 20px 0 0 20px;
             background-color: rgb(255, 255, 255);
             
-            &:hover{
-                .gnb_li{
+            
+              .gnb_li{
                     padding: unset;
                 }
-            }
+            
            
             
        }
@@ -264,17 +274,24 @@ body{
                      @media (max-width:991px){
                         // position: unset;
                         padding: unset;
-                        top: 12%;
+                        top: 8%;
                         .gnb_ul{
                             max-height: 0;  
-                            height: auto !important;                             
+                            height: auto !important;     
+                            text-align: unset !important;
+                            a{
+                                padding-left: 20px !important;
+                            }                        
                         }
                         &.action{
                             .gnb_a{
+                                
                                 span{
+                                    
+                                     color: #FE663F !important;
                                     &::before{
                                         
-                                        width: 8% !important;
+                                        width: 0% !important;
                                         border-radius: unset;
                                         
                                     }
@@ -289,11 +306,23 @@ body{
                                 color: #FE663F;
                                 right: 20px;
                                 transform: translateY(-50%);
-                                top: 50%;
-                                transition: 0.5s;
+                                top: 16%;
+                                
                             }
                             .gnb_ul{
-                                max-height: 200px;                               
+                                width: 100%;
+                                background-color: #FF6943;
+                                max-height: 150px;
+                                transform: unset;
+                                a{
+                                    span{
+                                        font-size: 12px;
+                                        font-weight: 400;
+                                        line-height: 12px;
+                                        color: #ffffff;
+                                    }
+                                }
+
                             }
                         }
                         &::after{
@@ -304,7 +333,7 @@ body{
                             right: 20px;
                             transform: translateY(-50%);
                             top: 50%;
-                            transition: 0.5s;
+                            
                         }
                      }
 
@@ -312,11 +341,8 @@ body{
                         
                          .gnb_a{
                              span{
-                                    @media (max-width:991px) {
-                                        font-size: 14px;
-                                        font-weight: 500;
-                                    }  
-                                     line-height: 100px;
+                                    
+                                     
                                      font-family: "Pretendard";
                                      font-size: 22px;
                                      font-weight: 400;
@@ -324,7 +350,16 @@ body{
                                      
                                      &:before {
                                       width: 40%;
+
                                     }
+                                    @media (max-width:991px) {
+                                        font-size: 14px;
+                                        font-weight: 500;
+                                        color: #414b5a;
+                                        &::before{
+                                            width: unset;
+                                        }
+                                    }  
                                    
                              }
                             
@@ -343,9 +378,10 @@ body{
                                      font-weight: 400;
                                      color: #414b5a;
                                      @media (max-width:991px){
-                                        line-height: 56px;
+                                        line-height: 64px;
                                         font-size: 14px;
                                         font-weight: 500;
+                                        padding-left: 20px !important;
                                         
 
                                      }
@@ -367,8 +403,9 @@ body{
                                                  border-radius: 3px;
                                                  transition: all 0.4s;
                                                  @media (max-width:991px){
-                                                    left: 42%;
-                                                    top: 56%;
+                                                    left: 50%;
+                                                    top: 19%;
+                                                    width: 0 !important;
                                                  }
                                      }
                                      
@@ -378,6 +415,17 @@ body{
                  .gnb_ul {
                     @media (max-width:991px){
                         position: unset;
+                        &:after,
+                        &:before{
+                        content: "";
+                        
+                        height: unset !important;
+                              
+                        }
+                        a{
+                            line-height: 50px;
+                        }
+
                     }
                              overflow: hidden;
                              height: 0;
@@ -399,6 +447,7 @@ body{
                                content: "";
                                display: block;
                                height: 40px;
+                              
                              }
                        
                              a {position: relative;
@@ -408,6 +457,7 @@ body{
                                  color: #8D1414;
                                  display: block;
                                  height: 50px;
+                                
                        
                                &:hover {
                                  font-family: "Pretendard";
@@ -430,6 +480,9 @@ body{
                                              border-top:1.5px solid #ffffff;
                                              padding: 5px 0;
                                              transition: 0.2s;
+                                             @media (max-width:991px) {
+                                                content: unset;
+                                             }
                                          }
                                          
                                          
@@ -464,7 +517,7 @@ body{
          color: #414B5A;
          list-style: none;
          &:hover { 
-             color: #FF6943;
+             color: #FF6943 !important;
          }
          @media (max-width:991px) {
             font-size: 12px;
@@ -590,6 +643,11 @@ body{
         overflow: hidden !important;
         margin-top: 4.8rem;
         height: 720px;
+        @media (max-width:991px) {
+            margin-top: 20px;
+
+
+        }
     
       .main_caver{
         position: relative;

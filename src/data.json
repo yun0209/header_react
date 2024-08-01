@@ -81,18 +81,6 @@
       "href": "misson.html",
       "cls": ["nav-mission px-60 gnb_li d-lg-none"],
       "gnb_ul_li": [
-        {
-          "Text": " ",
-          "href": " "
-        },
-        {
-          "Text": " ",
-          "href": " "
-        },
-        {
-          "Text": " ",
-          "href": " "
-        }
       ]
     }
 

@@ -13,7 +13,7 @@ const Swiper_yys = (props) => {
 
   return (
     <>
-       <div id="yswiper" className="swiper-container d-none">
+       <div id="yswiper" className="swiper-container">
         <div className="main_caver">
             <div className="swiper ov mySwiper">
                 
