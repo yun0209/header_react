@@ -19,48 +19,31 @@ const Swiper_yys = (props) => {
                 
                     <Swiper
                         modules={[Pagination, Autoplay]}
-                        spaceBetween={73}
-                        slidesPerView={1.35}
+                        spaceBetween={16}
+                        slidesPerView={1}
                         centeredSlides={true}
                         loop={true}
                         autoplay={{
                         delay: 6500000,
                         disableOnInteraction: false,
                         }}
+
                         breakpoints={{
-                            400: {
-                                slidesPerView: 1,
-                                spaceBetween: 0,
-                            },
-                            600: {
-                                slidesPerView: 1,
-                                spaceBetween: 0,
-                            },
-                            800: {
-                                slidesPerView: 1,
-                                spaceBetween: 0,
-                            },
-                            900: {
-                                slidesPerView: 1,
-                                spaceBetween: 0,
-                            },
-                            1500: {
-                                slidesPerView: 1.3,
-                                spaceBetween: 35,
-                            },
-                            1800: {
-                                slidesPerView: 1.35,
-                                spaceBetween: 73,
+                            768: {
+                              slidesPerView: 1.35,
+                              spaceBetween: 0,
                             }
-                        }}
+                          }}
+                        
                         pagination={{
+                        el: '.swiper-pagination',
                         clickable: true,
                         
                     }}
                     >
                     {slides.map((v, i) => (
                         <SwiperSlide key={i}>
-                            <div className={v.cls} style={{ "background":`url(${v.b_img}) center/ cover`}}>
+                            <div className="bs mx-md-3" style={{ "background":`url(${v.b_img}) center/ cover`}}>
                                 <Link to={v.href} className='w-100 h-100'>
                                    
                                     
@@ -72,8 +55,12 @@ const Swiper_yys = (props) => {
                     
                 
             </div>
+            <div className='swiper-pagination'></div>
         </div>
     </div>
+    <div className='h-uu'>
+
+      </div>
     </>
     
   );

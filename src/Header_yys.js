@@ -7,9 +7,11 @@ import { Link, Route, Routes } from 'react-router-dom';
 function Header_yys() {
   const { gnb } = yysnavi;
   const [isGnbVisible, setIsGnbVisible] = useState(false);
+  const [isBstyleActive, setIsBstyleActive] = useState(false);
 
   const toggleGnb = () => {
     setIsGnbVisible(!isGnbVisible);
+    setIsBstyleActive(!isBstyleActive);
   };
 
   useEffect(() => {
@@ -83,12 +85,13 @@ function Header_yys() {
               </li>
             </ul>
           </div>
-
+          
           <button onClick={toggleGnb} className="d-lg-none btn-cotm mx-60">
-            <i className="bi bi-list icon-cotm"></i>
+          <i className={`bi ${isGnbVisible ? 'bi-x' : 'bi-list'} icon-cotm`}></i>
           </button>
         </div>
       </header>
+      
 
       <Routes>
         <Route path="/about" element={<h2>ddd</h2>} />
