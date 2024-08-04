@@ -10,6 +10,11 @@
   align-items: center !important;
 }
 
+ul, p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 a {
   text-decoration: none !important;
   cursor: pointer;
@@ -655,3 +660,10 @@ li {
   font-weight: 500;
   margin-bottom: 0;
 }
+
+#yfooer .snsicon {
+  min-width: 204px;
+}
+#yfooer .tiem {
+  max-width: 412px;
+}/*# sourceMappingURL=header.css.map */

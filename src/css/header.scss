@@ -9,7 +9,12 @@
      align-items: center !important;
  }
 
+ ul,p{
+    margin: 0 !important; 
+    padding: 0 !important;
+}
 
+ 
  a {
      text-decoration: none !important;
      cursor: pointer;
@@ -786,4 +791,12 @@
  
      }
  
+   }
+   #yfooer{
+    .snsicon{
+        min-width: 204px;
+    }
+    .tiem{
+        max-width: 412px;
+    }
    }
